@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Award, ExternalLink } from "lucide-react";
 
 const certifications = [
@@ -7,19 +8,22 @@ const certifications = [
     title: "Spring 6, Spring Boot 3, Spring AI Microservices",
     issuer: "Udemy (Telusko)",
     description: "Comprehensive course covering the latest Spring framework technologies, including Spring Boot 3, microservices architecture, and Spring AI integration.",
-    badge: "Development"
+    badge: "Development",
+    certificateUrl: "#" // Add your certificate URL here
   },
   {
     title: "Microsoft Certified: Azure Developer Associate (AZ-204)",
     issuer: "Microsoft",
     description: "Professional certification demonstrating expertise in developing and deploying cloud applications and services on Microsoft Azure platform.",
-    badge: "Cloud"
+    badge: "Cloud",
+    certificateUrl: "#" // Add your certificate URL here
   },
   {
     title: "Microsoft Certified: Power BI Data Analyst (PL-300)",
     issuer: "Microsoft",
     description: "Certification validating skills in data visualization, business intelligence, and analytics using Microsoft Power BI platform.",
-    badge: "Analytics"
+    badge: "Analytics",
+    certificateUrl: "#" // Add your certificate URL here
   }
 ];
 
@@ -58,9 +62,24 @@ const Certifications = () => {
                   <p className="text-sm text-primary font-medium mt-1">{cert.issuer}</p>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-foreground/70 leading-relaxed">
+                  <p className="text-sm text-foreground/70 leading-relaxed mb-4">
                     {cert.description}
                   </p>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full"
+                    asChild
+                  >
+                    <a
+                      href={cert.certificateUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      View Certificate
+                    </a>
+                  </Button>
                 </CardContent>
               </Card>
             ))}

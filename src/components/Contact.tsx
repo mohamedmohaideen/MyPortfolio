@@ -26,6 +26,12 @@ const contactInfo = [
     label: "LinkedIn",
     value: "linkedin.com/in/mohamedmohaideen001",
     link: "https://linkedin.com/in/mohamedmohaideen001"
+  },
+  {
+    icon: Github,
+    label: "GitHub",
+    value: "github.com/Mohaideen-Mohana",
+    link: "https://github.com/Mohaideen-Mohana"
   }
 ];
 
@@ -101,7 +107,21 @@ const Contact = () => {
                       rel="noopener noreferrer"
                     >
                       <Linkedin className="w-4 h-4 mr-2" />
-                      LinkedIn Profile
+                      LinkedIn
+                    </a>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                    asChild
+                  >
+                    <a
+                      href="https://github.com/Mohaideen-Mohana"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      GitHub
                     </a>
                   </Button>
                 </div>
