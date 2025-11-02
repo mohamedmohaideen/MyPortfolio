@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import profileImage from "@/assets/profile.jpeg";
 
 const roles = [
   "Java Spring Boot Developer",
@@ -34,6 +35,14 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
+          <div className="mb-8 animate-fade-in">
+            <img 
+              src={profileImage} 
+              alt="Mohamed Mohaideen A" 
+              className="w-48 h-48 rounded-full mx-auto object-cover border-4 border-primary/30 shadow-2xl"
+            />
+          </div>
+          
           <p className="text-xl md:text-2xl text-foreground/80 mb-4 animate-fade-in">
             Hello! I&apos;m
           </p>

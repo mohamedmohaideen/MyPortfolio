@@ -1,31 +1,22 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Cloud, Film, ShoppingCart, Code } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Building2, Bell, ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    icon: Cloud,
-    title: "Weather Service Application",
-    description: "RESTful API built with Spring Boot that fetches live weather data from external APIs. Features include location-based weather information, caching for performance optimization, and comprehensive error handling.",
-    technologies: ["Spring Boot", "REST API", "External APIs", "Java"]
+    icon: Building2,
+    title: "Spring Boot Banking Application",
+    description: "Developed a full-fledged banking system supporting deposit, withdrawal, and account management using Spring Boot, JPA, and MySQL with JWT-based authentication.",
+    technologies: ["Spring Boot", "MySQL", "JPA", "JWT", "REST API"],
+    githubUrl: "https://github.com/mohamedmohaideen/springboot-banking-app"
   },
   {
-    icon: Film,
-    title: "Movie Application",
-    description: "Full-stack CRUD application for managing movie databases. Implements Create, Read, Update, and Delete operations with Spring Boot backend and MySQL database integration for persistent storage.",
-    technologies: ["Spring Boot", "MySQL", "CRUD Operations", "JPA"]
-  },
-  {
-    icon: ShoppingCart,
-    title: "Product Order Delivery Microservice",
-    description: "Event-driven microservice architecture implementing product ordering and delivery system. Utilizes Apache Kafka for asynchronous messaging between services, ensuring scalability and reliability.",
-    technologies: ["Microservices", "Kafka", "Spring Boot", "Event-Driven"]
-  },
-  {
-    icon: Code,
-    title: "Spring Boot + React Integration",
-    description: "Full-stack application demonstrating seamless integration between Spring Boot backend and React frontend. Features RESTful API connectivity, state management, and responsive UI components.",
-    technologies: ["Spring Boot", "React.js", "REST API", "Full-Stack"]
+    icon: Bell,
+    title: "Real-Time Notification System",
+    description: "Built a WebSocket and RabbitMQ-based microservice enabling instant push notifications across multiple client applications.",
+    technologies: ["Spring Boot", "WebSocket", "RabbitMQ", "Microservices"],
+    githubUrl: "https://github.com/mohamedmohaideen/Realtime-Notification-service"
   }
 ];
 
@@ -65,7 +56,7 @@ const Projects = () => {
                     <CardDescription className="text-foreground/70 mb-4 text-base leading-relaxed">
                       {project.description}
                     </CardDescription>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, techIndex) => (
                         <Badge
                           key={techIndex}
@@ -76,6 +67,21 @@ const Projects = () => {
                         </Badge>
                       ))}
                     </div>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full"
+                      asChild
+                    >
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        View on GitHub
+                      </a>
+                    </Button>
                   </CardContent>
                 </Card>
               );

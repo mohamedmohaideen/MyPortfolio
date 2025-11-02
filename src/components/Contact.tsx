@@ -30,8 +30,8 @@ const contactInfo = [
   {
     icon: Github,
     label: "GitHub",
-    value: "github.com/Mohaideen-Mohana",
-    link: "https://github.com/Mohaideen-Mohana"
+    value: "github.com/mohamedmohaideen",
+    link: "https://github.com/mohamedmohaideen"
   }
 ];
 
@@ -116,7 +116,7 @@ const Contact = () => {
                     asChild
                   >
                     <a
-                      href="https://github.com/Mohaideen-Mohana"
+                      href="https://github.com/mohamedmohaideen"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
