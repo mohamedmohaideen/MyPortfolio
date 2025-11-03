@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { Github, Linkedin } from "lucide-react";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,12 +38,24 @@ const Navigation = () => {
           ))}
         </div>
 
-        <Button
-          onClick={() => scrollToSection("contact")}
-          className="bg-primary hover:bg-primary/90 text-primary-foreground"
-        >
-          Get In Touch
-        </Button>
+        <div className="flex gap-4 items-center">
+          <a
+            href="https://www.linkedin.com/in/mohamedmohaideen/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground/80 hover:text-primary transition-colors"
+          >
+            <Linkedin className="w-6 h-6" />
+          </a>
+          <a
+            href="https://github.com/mohamedmohaideen"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground/80 hover:text-primary transition-colors"
+          >
+            <Github className="w-6 h-6" />
+          </a>
+        </div>
       </div>
     </nav>
   );

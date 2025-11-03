@@ -6,7 +6,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Tenkasi, India",
+    value: "Bangalore, India",
     link: null
   },
   {

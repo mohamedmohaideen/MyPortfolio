@@ -75,7 +75,7 @@ const Hero = () => {
               className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8"
               asChild
             >
-              <a href="#about">About Me</a>
+              <a href="/MohamedMohaideen_Resume.pdf" download>Download Resume</a>
             </Button>
           </div>
         </div>
