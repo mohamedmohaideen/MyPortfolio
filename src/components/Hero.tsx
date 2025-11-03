@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
 import profileImage from "@/assets/profile.jpeg";
 
 const roles = [
@@ -26,7 +25,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen gradient-bg flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen gradient-bg flex items-center justify-center relative overflow-hidden pt-20">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
@@ -81,17 +80,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <button
-        onClick={() => scrollToSection("about")}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
-      >
-        <div className="flex flex-col items-center gap-2 text-foreground/60 hover:text-primary transition-colors">
-          <span className="text-sm">Scroll to explore</span>
-          <ChevronDown className="w-6 h-6" />
-        </div>
-      </button>
     </section>
   );
 };
