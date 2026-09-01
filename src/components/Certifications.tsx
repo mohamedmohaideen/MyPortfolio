@@ -5,18 +5,28 @@ import { Award, ExternalLink } from "lucide-react";
 
 const certifications = [
   {
-    title: "Spring Boot and Microservices",
-    issuer: "Udemy (Telusko)",
-    description: "Comprehensive course covering the latest Spring framework technologies, including Spring Boot 3, microservices architecture, and Spring AI integration.",
-    badge: "Development",
-    certificateUrl: "https://github.com/mohamedmohaideen/SpringBoot_Certificate"
-  },
-  {
     title: "Microsoft Certified: Azure Developer Associate (AZ-204)",
     issuer: "Microsoft",
-    description: "Professional certification demonstrating expertise in developing and deploying cloud applications and services on Microsoft Azure platform.",
+    description:
+      "Professional certification demonstrating expertise in developing, deploying, and monitoring cloud applications and services on the Microsoft Azure platform.",
     badge: "Cloud",
     certificateUrl: "https://github.com/mohamedmohaideen/Azure-Developer-Associate"
+  },
+  {
+    title: "Claude Certified Developer – Foundations (CCDV-F)",
+    issuer: "Anthropic",
+    description:
+      "Certification covering foundational skills for building applications with Claude, including prompt design, tool use, and AI-assisted development workflows.",
+    badge: "AI",
+    certificateUrl: "https://github.com/mohamedmohaideen"
+  },
+  {
+    title: "Master Microservices with Spring Cloud and DevOps",
+    issuer: "Udemy",
+    description:
+      "In-depth course on microservices with Spring Boot 3 and Spring Cloud, containerisation with Docker, Kubernetes deployments, Helm, and observability tooling.",
+    badge: "DevOps",
+    certificateUrl: "https://github.com/mohamedmohaideen/SpringBoot_Certificate"
   }
 ];
 
@@ -34,11 +44,11 @@ const Certifications = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
               <Card
                 key={index}
-                className="glass-card hover:border-primary/50 transition-all duration-300 hover:scale-105"
+                className="glass-card hover:border-primary/50 transition-all duration-300 hover:scale-105 flex flex-col"
               >
                 <CardHeader>
                   <div className="flex items-start gap-3 mb-2">
@@ -49,26 +59,18 @@ const Certifications = () => {
                       {cert.badge}
                     </Badge>
                   </div>
-                  <CardTitle className="text-lg text-foreground leading-tight">
-                    {cert.title}
-                  </CardTitle>
+                  <CardTitle className="text-lg text-foreground leading-tight">{cert.title}</CardTitle>
                   <p className="text-sm text-primary font-medium mt-1">{cert.issuer}</p>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-foreground/70 leading-relaxed mb-4">
-                    {cert.description}
-                  </p>
+                <CardContent className="flex flex-col flex-1">
+                  <p className="text-sm text-foreground/70 leading-relaxed mb-4 flex-1">{cert.description}</p>
                   <Button
                     variant="outline"
                     size="sm"
                     className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full"
                     asChild
                   >
-                    <a
-                      href={cert.certificateUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a href={cert.certificateUrl} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="w-4 h-4 mr-2" />
                       View Certificate
                     </a>
