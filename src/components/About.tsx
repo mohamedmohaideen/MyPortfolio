@@ -1,27 +1,34 @@
-import { Code2, Database, Server, Award } from "lucide-react";
+import { GitBranch, Container, Cloud, Activity } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const highlights = [
   {
-    icon: Code2,
-    title: "Backend Development",
-    description: "Strong expertise in Java, Spring Boot, and REST API development with microservices architecture"
+    icon: GitBranch,
+    title: "CI/CD & GitOps",
+    description: "Jenkins, GitHub Actions, ArgoCD and SonarQube quality gates powering fully automated delivery pipelines"
   },
   {
-    icon: Database,
-    title: "Database Management",
-    description: "Proficient in MySQL, H2, and database integration with Spring Data"
+    icon: Container,
+    title: "Containers & Kubernetes",
+    description: "Docker, Kubernetes and Helm library charts driving zero-downtime deployments across Dev/QA/Production"
   },
   {
-    icon: Server,
-    title: "Microservices & Kafka",
-    description: "Experience with event-driven microservices and Kafka integration"
+    icon: Cloud,
+    title: "Cloud & IaC",
+    description: "AWS and Azure (AZ-204 certified) with Terraform, Ansible and CloudFormation provisioning"
   },
   {
-    icon: Award,
-    title: "Cloud & DevOps",
-    description: "Microsoft Azure certified with CI/CD automation using Jenkins"
+    icon: Activity,
+    title: "Observability",
+    description: "Grafana, Prometheus, Loki, Tempo, Splunk, Dynatrace and Datadog for metrics, logs and tracing"
   }
+];
+
+const stats = [
+  { value: "2.5+", label: "Years Experience" },
+  { value: "10+", label: "Microservices Managed" },
+  { value: "~60%", label: "Manual Effort Reduced" },
+  { value: "0", label: "Unplanned Downtime" }
 ];
 
 const About = () => {
@@ -34,22 +41,40 @@ const About = () => {
               <span className="gradient-text">About Me</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              Passionate Java developer with a strong foundation in backend technologies
+              DevOps Engineer and Java Developer building reliable delivery pipelines for regulated banking platforms
             </p>
           </div>
 
-          <div className="mb-16">
+          <div className="mb-12">
             <Card className="glass-card">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-semibold mb-4 text-primary">My Journey</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-primary">Professional Summary</h3>
                 <p className="text-foreground/80 leading-relaxed text-lg">
-                  I&apos;m a motivated and detail-oriented Java Spring Boot Microservices Developer currently working at Tata Consultancy Services (TCS) on the American Express Digital Banking project. My expertise lies in building and testing scalable backend applications using Java, Spring Boot, and microservices architecture.
+                  I&apos;m a results-driven DevOps Engineer with 2.5 years of experience delivering CI/CD automation,
+                  Kubernetes orchestration, and cloud-native infrastructure for enterprise banking clients including
+                  UniCredit and American Express. I reduce deployment cycles and manual intervention through Jenkins,
+                  GitHub Actions, ArgoCD, and GitOps practices.
                 </p>
                 <p className="text-foreground/80 leading-relaxed text-lg mt-4">
-                  I specialize in REST API development, Kafka-based event-driven microservices, and database integration. My experience includes writing comprehensive BDD test cases, performing API testing with Postman, and automating CI/CD pipelines with Jenkins. I&apos;m passionate about delivering secure, high-performance enterprise solutions while continuously learning and adapting to new technologies.
+                  I have a proven track record of improving release reliability, accelerating delivery pipelines, and
+                  implementing end-to-end observability using Grafana, Prometheus, Loki, Tempo, Splunk, and Datadog.
+                  With a strong Java 17 and Spring Boot foundation plus Terraform, Ansible, Docker, Kubernetes and Helm
+                  expertise, I collaborate across development, QA, and business teams to drive operational efficiency and
+                  zero-downtime deployments in regulated financial environments.
                 </p>
               </CardContent>
             </Card>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            {stats.map((stat) => (
+              <Card key={stat.label} className="glass-card">
+                <CardContent className="p-6 text-center">
+                  <p className="text-3xl md:text-4xl font-bold gradient-text mb-1">{stat.value}</p>
+                  <p className="text-sm text-muted-foreground">{stat.label}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
