@@ -31,7 +31,7 @@ const Navigation = () => {
             <button
               key={item}
               onClick={() => scrollToSection(item)}
-              className="text-foreground/80 hover:text-primary transition-colors capitalize"
+              className="text-foreground/80 hover:text-primary transition-colors capitalize text-sm"
             >
               {item}
             </button>
