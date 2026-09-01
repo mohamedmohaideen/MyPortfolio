@@ -40,7 +40,7 @@ const Navigation = () => {
 
         <div className="flex gap-4 items-center">
           <a
-            href="https://www.linkedin.com/in/mohamedmohaideen/"
+            href="https://www.linkedin.com/in/mohamedmohaideen001"
             target="_blank"
             rel="noopener noreferrer"
             className="text-foreground/80 hover:text-primary transition-colors"
