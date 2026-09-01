@@ -27,7 +27,7 @@ const Navigation = () => {
         <h1 className="text-2xl font-bold gradient-text">Mohamed Mohaideen</h1>
         
         <div className="hidden md:flex gap-8">
-          {["about", "skills", "experience", "projects", "certifications", "contact"].map((item) => (
+          {["about", "skills", "experience", "projects", "certifications", "education", "contact"].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item)}
