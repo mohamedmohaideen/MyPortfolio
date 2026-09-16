@@ -1,34 +1,38 @@
-import { GitBranch, Container, Cloud, Activity } from "lucide-react";
+import { Coffee, Boxes, Container, Activity } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const highlights = [
   {
-    icon: GitBranch,
-    title: "CI/CD & GitOps",
-    description: "Jenkins, GitHub Actions, ArgoCD and SonarQube quality gates powering fully automated delivery pipelines"
+    icon: Coffee,
+    title: "Java & Spring",
+    description:
+      "Java 17/21, Spring Boot 3/4, Spring Framework 6/7, Spring Cloud and Spring Security for enterprise banking backends"
+  },
+  {
+    icon: Boxes,
+    title: "Microservices & APIs",
+    description:
+      "REST APIs, OpenAPI/Swagger, OpenFeign, API Gateway, Eureka, Config Server, Circuit Breaker, Retry and Rate Limiting"
   },
   {
     icon: Container,
-    title: "Containers & Kubernetes",
-    description: "Docker, Kubernetes and Helm library charts driving zero-downtime deployments across Dev/QA/Production"
-  },
-  {
-    icon: Cloud,
-    title: "Cloud & IaC",
-    description: "AWS and Azure (AZ-204 certified) with Terraform, Ansible and CloudFormation provisioning"
+    title: "Cloud-Native & DevOps",
+    description:
+      "Docker, Kubernetes, Helm, AWS/Azure, Terraform, Ansible, Jenkins, GitHub Actions, GitOps with ArgoCD"
   },
   {
     icon: Activity,
-    title: "Observability",
-    description: "Grafana, Prometheus, Loki, Tempo, Splunk, Dynatrace and Datadog for metrics, logs and tracing"
+    title: "Observability & Security",
+    description:
+      "Prometheus, Grafana, Loki, Tempo, Dynatrace, Splunk, OpenTelemetry with OAuth2, OIDC, JWT and Keycloak"
   }
 ];
 
 const stats = [
-  { value: "2.5+", label: "Years Experience" },
-  { value: "10+", label: "Microservices Managed" },
-  { value: "~60%", label: "Manual Effort Reduced" },
-  { value: "0", label: "Unplanned Downtime" }
+  { value: "3", label: "Years Experience" },
+  { value: "8-10", label: "Banking Microservices" },
+  { value: "~40%", label: "Faster Root-Cause Analysis" },
+  { value: "~30%", label: "Less Investigation Effort" }
 ];
 
 const About = () => {
@@ -41,7 +45,7 @@ const About = () => {
               <span className="gradient-text">About Me</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              DevOps Engineer and Java Developer building reliable delivery pipelines for regulated banking platforms
+              Cloud-Native Java Developer building distributed banking microservices end to end
             </p>
           </div>
 
@@ -50,17 +54,17 @@ const About = () => {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold mb-4 text-primary">Professional Summary</h3>
                 <p className="text-foreground/80 leading-relaxed text-lg">
-                  I&apos;m a results-driven DevOps Engineer with 2.5 years of experience delivering CI/CD automation,
-                  Kubernetes orchestration, and cloud-native infrastructure for enterprise banking clients including
-                  UniCredit and American Express. I reduce deployment cycles and manual intervention through Jenkins,
-                  GitHub Actions, ArgoCD, and GitOps practices.
+                  I&apos;m a Cloud-Native Java Developer with 3 years of experience at Tata Consultancy Services (TCS),
+                  specialising in enterprise banking applications, microservices, REST APIs, cloud-native development
+                  and DevOps practices. I work day to day with Java 17/21, Spring Boot 3/4, Spring Framework 6/7,
+                  Spring Cloud, Apache Kafka, Docker, Kubernetes, Helm, AWS, Terraform, Jenkins, GitOps and ArgoCD.
                 </p>
                 <p className="text-foreground/80 leading-relaxed text-lg mt-4">
-                  I have a proven track record of improving release reliability, accelerating delivery pipelines, and
-                  implementing end-to-end observability using Grafana, Prometheus, Loki, Tempo, Splunk, and Datadog.
-                  With a strong Java 17 and Spring Boot foundation plus Terraform, Ansible, Docker, Kubernetes and Helm
-                  expertise, I collaborate across development, QA, and business teams to drive operational efficiency and
-                  zero-downtime deployments in regulated financial environments.
+                  I have strong hands-on experience building and troubleshooting distributed microservices, securing
+                  APIs with Spring Security, OAuth2, OIDC, JWT and Keycloak, and establishing observability with
+                  Prometheus, Grafana, Dynatrace, Loki and Tempo. My experience spans the complete application
+                  lifecycle — backend development and API integration through containerisation, CI/CD, deployment,
+                  monitoring and production troubleshooting.
                 </p>
               </CardContent>
             </Card>

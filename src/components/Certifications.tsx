@@ -18,15 +18,16 @@ const certifications = [
     description:
       "Certification covering foundational skills for building applications with Claude, including prompt design, tool use, and AI-assisted development workflows.",
     badge: "AI",
-    certificateUrl: "https://github.com/mohamedmohaideen"
+    certificateUrl: "https://github.com/mohamedmohaideen/SpringBoot_Certificate"
   },
   {
-    title: "Master Microservices with Spring Cloud and DevOps",
+    title: "Master Microservices with Spring Cloud, Docker, Kubernetes & DevOps with AWS",
     issuer: "Udemy",
     description:
-      "In-depth course on microservices with Spring Boot 3 and Spring Cloud, containerisation with Docker, Kubernetes deployments, Helm, and observability tooling.",
+      "In-depth course on microservices with Spring Boot and Spring Cloud, containerisation with Docker, Kubernetes and Helm deployments, DevOps delivery and AWS.",
     badge: "DevOps",
-    certificateUrl: "https://github.com/mohamedmohaideen/SpringBoot_Certificate"
+    certificateUrl:
+      "https://github.com/mohamedmohaideen/Master-Microservice-with-Spring-Cloud-Docker-Kubernetes-with-AWS"
   }
 ];
 

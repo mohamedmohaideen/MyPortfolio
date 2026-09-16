@@ -1,25 +1,8 @@
-import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Download, Mail } from "lucide-react";
 import profileImage from "@/assets/profile.jpeg";
 
-const roles = [
-  "DevOps Engineer",
-  "Java Developer",
-  "Cloud-Native Engineer",
-  "CI/CD & Kubernetes Specialist"
-];
-
 const Hero = () => {
-  const [currentRole, setCurrentRole] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentRole((prev) => (prev + 1) % roles.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="min-h-screen gradient-bg flex items-center justify-center relative overflow-hidden pt-32 pb-20">
       {/* Animated background elements */}
@@ -33,7 +16,7 @@ const Hero = () => {
           <div className="mb-8 animate-fade-in">
             <img
               src={profileImage}
-              alt="Mohamed Mohaideen A - DevOps Engineer and Java Developer"
+              alt="Mohamed Mohaideen A - Cloud-Native Java Developer"
               className="w-48 h-48 rounded-full mx-auto object-cover border-4 border-primary/30 shadow-2xl"
             />
           </div>
@@ -46,21 +29,18 @@ const Hero = () => {
             <span className="gradient-text">Mohamed Mohaideen A</span>
           </h1>
 
-          <div className="text-2xl md:text-3xl text-foreground/90 mb-4 min-h-12 flex items-center justify-center flex-wrap">
-            <span className="mr-3">I am a</span>
-            <span className="gradient-text font-semibold transition-all duration-500">
-              {roles[currentRole]}
-            </span>
+          <div className="text-2xl md:text-3xl text-foreground/90 mb-4">
+            <span className="gradient-text font-semibold">Cloud-Native Java Developer</span>
           </div>
 
           <p className="text-base md:text-lg text-primary font-medium mb-8">
-            2.5 Years Experience • Banking &amp; Financial Services
+            3 Years Experience • Tata Consultancy Services • Banking &amp; Financial Services
           </p>
 
           <p className="text-lg md:text-xl text-foreground/70 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Results-driven DevOps Engineer delivering CI/CD automation, Kubernetes orchestration, and cloud-native
-            infrastructure for enterprise banking clients including UniCredit and American Express. Skilled in Jenkins,
-            ArgoCD, Terraform, Docker, Helm, and end-to-end observability.
+            Building enterprise banking microservices with Java 17/21, Spring Boot 3/4, Spring Cloud and Apache Kafka —
+            containerised with Docker and Kubernetes, delivered through Jenkins, GitOps and ArgoCD, and observed with
+            Prometheus, Grafana, Loki and Tempo.
           </p>
 
           <div className="flex gap-4 justify-center flex-wrap">
