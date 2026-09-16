@@ -4,42 +4,71 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 const experiences = [
   {
-    role: "DevOps / Cloud-Native Engineer",
+    role: "Software Engineer — Cloud-Native Java Developer",
     company: "Tata Consultancy Services (TCS)",
     client: "Client: UniCredit — Enterprise Banking Platform",
     location: "Bangalore, India",
-    period: "Oct 2025 – Present",
+    period: "Nov 2025 – Present",
     current: true,
     points: [
-      "Managed and maintained Kubernetes-based deployments across 3 environments (Dev/QA/Production) for 10+ banking microservices, achieving zero unplanned downtime across all production releases.",
-      "Designed and owned Jenkins CI/CD pipelines for 10+ microservices, reducing manual build-and-deploy effort by ~60% and cutting average release cycle time from 2 days to under 4 hours.",
-      "Implemented a GitOps delivery model using ArgoCD, enabling declarative automated deployments and reducing environment drift incidents by ~70%.",
-      "Integrated SonarQube quality gates into all CI pipelines, enforcing static code analysis and security scanning on every build — blocking 100% of merges failing quality thresholds.",
-      "Built centralised observability using Splunk and Dynatrace, reducing mean time to detect (MTTD) production issues by ~40% through proactive alerting and root-cause dashboards.",
-      "Automated 5+ recurring operational workflows including scheduled email notifications and Excel-based reporting, eliminating ~8–10 hours of manual effort per week.",
-      "Led post-incident reviews with development, QA, and business teams to resolve production defects — improving mean time to resolution (MTTR) by ~30%.",
-      "Managed Helm chart library architecture with environment-specific values for 3-tier deployments, reducing environment-specific configuration errors by ~50%."
+      "Architected Java 21 and Spring Boot 4 microservices across 8–10 active banking services, strengthening scalable backend service delivery for enterprise banking workflows.",
+      "Engineered Spring Cloud, REST APIs, OpenFeign, API Gateway, Eureka, and centralized configuration components, improving service-to-service communication across distributed applications.",
+      "Orchestrated Docker and Kubernetes deployments with Helm Charts, ConfigMaps, Services, and application configuration, enabling repeatable cloud-native deployment and troubleshooting.",
+      "Streamlined Jenkins CI/CD pipelines and GitOps deployment practices with ArgoCD, improving application build, release, and deployment consistency across environments.",
+      "Optimized production troubleshooting using Dynatrace, Splunk, Prometheus, and Grafana, reducing root-cause-analysis resolution time by approximately 40%.",
+      "Engineered Apache Kafka-based event-driven integrations, improving asynchronous communication and decoupling between distributed banking services.",
+      "Strengthened application security using Spring Security, OAuth2, JWT, OIDC, and Keycloak concepts, supporting secure authentication and authorization across backend services.",
+      "Resolved distributed application issues involving Kubernetes Services, configuration, service discovery, API Gateway, Kafka, and centralized logging, improving application reliability during production support.",
+      "Collaborated with development, business, DevOps, and support teams in Agile/Scrum environments, accelerating incident analysis, defect resolution, and production validation."
     ],
-    tech: ["Kubernetes", "Jenkins", "ArgoCD", "Helm", "SonarQube", "Splunk", "Dynatrace", "GitOps", "Docker"]
+    tech: [
+      "Java 21",
+      "Spring Boot 4",
+      "Spring Cloud",
+      "Apache Kafka",
+      "Docker",
+      "Kubernetes",
+      "Helm",
+      "Jenkins",
+      "ArgoCD",
+      "Dynatrace",
+      "Splunk",
+      "Prometheus",
+      "Grafana",
+      "Keycloak"
+    ]
   },
   {
-    role: "DevOps / Automation Engineer",
+    role: "Assistant Systems Engineer — Cloud-Native Automation & Integration Engineer",
     company: "Tata Consultancy Services (TCS)",
-    client: "Client: American Express — Digital Banking Services",
+    client: "Client: American Express — Global Financial Services",
     location: "Bangalore, India",
-    period: "Apr 2024 – Oct 2025",
+    period: "Mar 2024 – Oct 2025",
     current: false,
     points: [
-      "Built and maintained Jenkins CI/CD pipelines for 6+ digital banking services (account opening, management, servicing, closure), reducing regression cycle time by ~50%.",
-      "Managed Docker and Kubernetes environments for application and test-environment validation, supporting 3 parallel test environments with zero misconfiguration incidents.",
-      "Designed a reusable Java + Cucumber API automation framework covering 200+ test scenarios, increasing test coverage by ~40% and eliminating 15+ hours of manual regression per sprint.",
-      "Integrated automated regression suites into Jenkins CI pipelines, enabling continuous test execution on every build and reducing defect escape rate by ~35%.",
-      "Mentored 2 junior automation engineers on framework design, Gherkin best practices, and Jenkins pipeline integration — full productivity within 6 weeks.",
-      "Used Git branching strategies with 4 cross-functional teams to coordinate releases and reduce merge conflicts via structured PR review workflows.",
-      "Investigated and resolved 50+ automation failures and API defects using Splunk log analysis, reducing flaky test rate from ~20% to under 5% within 2 sprints.",
-      "Contributed to Agile sprint ceremonies, delivering automation tasks on schedule across 10+ sprints with zero carry-over items."
+      "Engineered Java and Spring Boot API automation frameworks using Cucumber, JUnit, Postman, and Swagger/OpenAPI, strengthening functional and regression validation for banking microservices.",
+      "Developed REST API validation and integration-testing components, improving repeatability of request, response, business-rule, and service-integration verification.",
+      "Containerized API automation components using Docker and Kubernetes, enabling consistent execution and validation across containerized application environments.",
+      "Automated CI/CD execution through Jenkins and AWS delivery services, improving repeatability of build, test, and deployment workflows.",
+      "Provisioned AWS environments using VPC, Security Groups, EC2, EBS, and IAM configurations, creating isolated infrastructure for automated application testing.",
+      "Integrated Splunk-based application logging and troubleshooting workflows, reducing recurring service-integration investigation effort by approximately 30%.",
+      "Optimized regression validation through automated API test execution, reducing repetitive manual verification across banking application workflows.",
+      "Collaborated with development, QA, business, and support teams in Agile environments, accelerating defect investigation, fix validation, and release readiness."
     ],
-    tech: ["Jenkins", "Docker", "Kubernetes", "Java", "Cucumber", "Splunk", "Git", "Agile"]
+    tech: [
+      "Java",
+      "Spring Boot",
+      "Cucumber",
+      "JUnit",
+      "Postman",
+      "Swagger / OpenAPI",
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "AWS",
+      "Splunk",
+      "Agile"
+    ]
   }
 ];
 
@@ -53,7 +82,7 @@ const Experience = () => {
               <span className="gradient-text">Professional Experience</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              2.5 years across enterprise banking &amp; financial services
+              3 years at TCS across enterprise banking &amp; financial services
             </p>
           </div>
 
